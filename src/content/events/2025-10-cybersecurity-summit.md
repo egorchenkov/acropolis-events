@@ -16,6 +16,7 @@ photos: []
 contact:
   email: "info@acropolis.uz"
   telegram: "https://t.me/acropolis_integro"
+  website: "acropolis.uz"
 ---
 
 Acropolis Integro приняла участие в Cyber Security Summit Central Eurasia 2025 — ежегодной встрече лидеров индустрии кибербезопасности Центральной Азии. Мероприятие организовано при поддержке Национального центра кибербезопасности Республики Узбекистан.

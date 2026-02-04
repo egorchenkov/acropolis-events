@@ -89,6 +89,7 @@ ctaQuestion: "Готовы начать AI-трансформацию?"
 contact:
   email: "info@acropolis.uz"
   telegram: "https://t.me/acropolis_integro"
+  website: "acropolis.uz"
 ---
 
 Итоги бизнес-ужина: киберустойчивость, контейнеризация и on-premise AI — три измерения готовности бизнеса к эпохе искусственного интеллекта.

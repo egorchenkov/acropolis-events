@@ -55,6 +55,7 @@ ctaQuestion: "Готовы построить ЦОД будущего?"
 contact:
   email: "info@acropolis.uz"
   telegram: "https://t.me/acropolis_integro"
+  website: "acropolis.uz"
 ---
 
 16 апреля мы провели закрытую встречу инфраструктурного клуба Acropolis, посвящённую решениям Juniper Networks для современных центров обработки данных. Эксперты Juniper представили концепцию Cloud-Ready Data Center (CRDC) — архитектуру, которая позволяет строить масштабируемую, безопасную и готовую к облачным нагрузкам инфраструктуру.
