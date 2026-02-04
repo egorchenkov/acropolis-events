@@ -13,9 +13,10 @@ interface Props {
   location?: string;
   locationAddress?: string;
   navLinks?: { label: string; href: string }[];
+  isHomePage?: boolean;
 }
 
-const { title, description, ogImage, canonicalUrl, dateISO, location, locationAddress, navLinks } = Astro.props;
+const { title, description, ogImage, canonicalUrl, dateISO, location, locationAddress, navLinks, isHomePage } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -32,6 +33,7 @@ const { title, description, ogImage, canonicalUrl, dateISO, location, locationAd
     dateISO={dateISO}
     location={location}
     locationAddress={locationAddress}
+    isHomePage={isHomePage}
   />
 </head>
 <body>

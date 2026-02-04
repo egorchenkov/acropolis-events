@@ -7,9 +7,10 @@ interface Props {
   dateISO?: string;
   location?: string;
   locationAddress?: string;
+  isHomePage?: boolean;
 }
 
-const { title, description, ogImage, canonicalUrl, dateISO, location, locationAddress } = Astro.props;
+const { title, description, ogImage, canonicalUrl, dateISO, location, locationAddress, isHomePage } = Astro.props;
 
 const siteUrl = 'https://events.acropolis.uz';
 const fullUrl = canonicalUrl || siteUrl + Astro.url.pathname;
@@ -18,6 +19,9 @@ const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : siteUrl + 
 
 <title>{title}</title>
 <meta name="description" content={description} />
+<meta name="keywords" content="IT мероприятия Узбекистан, инфраструктурный клуб, Acropolis Integro, IT конференции Ташкент, бизнес-ужины IT, Commvault, SUSE, Juniper, центр обработки данных, кибербезопасность" />
+<meta name="author" content="Acropolis Integro" />
+<meta name="robots" content="index, follow" />
 <link rel="canonical" href={fullUrl} />
 
 <!-- Open Graph -->
@@ -36,6 +40,37 @@ const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : siteUrl + 
 {fullOgImage && <meta name="twitter:image" content={fullOgImage} />}
 
 <!-- JSON-LD -->
+{isHomePage && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Acropolis Integro",
+    "url": "https://acropolis.uz",
+    "logo": "https://events.acropolis.uz/images/logo-color.svg",
+    "description": "Системный интегратор и IT-дистрибьютор в Центральной Азии. Организатор инфраструктурного клуба для IT-профессионалов.",
+    "sameAs": [
+      "https://t.me/acropolis_integro"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@acropolis.uz",
+      "contactType": "customer service"
+    }
+  })} />
+)}
+{isHomePage && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ACROPOLIS INTEGRO Events",
+    "url": "https://events.acropolis.uz",
+    "description": description,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Acropolis Integro"
+    }
+  })} />
+)}
 {dateISO && location && (
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
