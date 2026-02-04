@@ -8,6 +8,8 @@ eventType: "participation"
 partners:
   - name: "Commvault"
     logo: "/images/partners/commvault.svg"
+  - name: "Fortis Distribution"
+    logo: "/images/partners/fortis.svg"
 description: "Acropolis Integro приняла участие в ежегодном саммите по кибербезопасности Центральной Евразии совместно с партнёром Commvault. Мероприятие организовано при поддержке Национального центра кибербезопасности Узбекистана и собирает ключевых decision makers в индустрии кибербезопасности региона."
 ctaQuestion: "Готовы укрепить кибербезопасность?"
 photos: []
