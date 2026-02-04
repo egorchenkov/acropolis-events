@@ -1,0 +1,56 @@
+---
+interface Props {
+  navLinks?: { label: string; href: string }[];
+}
+
+const { navLinks } = Astro.props;
+
+const defaultLinks = [
+  { label: 'Мероприятия', href: '/' },
+];
+const links = navLinks || defaultLinks;
+---
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="/images/logo-color.svg" alt="Acropolis" width="36" height="36" />
+      <span>ACROPOLIS INTEGRO</span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      {links.map((link) => (
+        <a href={link.href}>{link.label}</a>
+      ))}
+      <a href="#contact" class="nav-cta">Связаться →</a>
+    </div>
+    <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<script>
+  // Scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (nav) {
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    }
+  });
+
+  // Mobile toggle
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+  toggle?.addEventListener('click', () => {
+    links?.classList.toggle('open');
+  });
+
+  // Close mobile menu on link click
+  links?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      links?.classList.remove('open');
+    });
+  });
+</script>

@@ -1,0 +1,57 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  dateISO?: string;
+  location?: string;
+  locationAddress?: string;
+}
+
+const { title, description, ogImage, canonicalUrl, dateISO, location, locationAddress } = Astro.props;
+
+const siteUrl = 'https://events.acropolis.uz';
+const fullUrl = canonicalUrl || siteUrl + Astro.url.pathname;
+const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : siteUrl + ogImage) : undefined;
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={fullUrl} />
+
+<!-- Open Graph -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={fullUrl} />
+{fullOgImage && <meta property="og:image" content={fullOgImage} />}
+<meta property="og:site_name" content="ACROPOLIS INTEGRO Events" />
+<meta property="og:locale" content="ru_RU" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+{fullOgImage && <meta name="twitter:image" content={fullOgImage} />}
+
+<!-- JSON-LD -->
+{dateISO && location && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": title.replace(' — ACROPOLIS INTEGRO Events', ''),
+    "startDate": dateISO,
+    "location": {
+      "@type": "Place",
+      "name": location,
+      ...(locationAddress ? { address: locationAddress } : {}),
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Acropolis Integro",
+      "url": "https://acropolis.uz",
+    },
+    "description": description,
+  })} />
+)}

@@ -1,0 +1,50 @@
+---
+interface Props {
+  name: string;
+  company: string;
+  role?: string;
+  topic: string;
+  details?: string[];
+  photo?: string;
+  index: number;
+}
+
+const { name, company, role, topic, details, photo, index } = Astro.props;
+
+const initials = name
+  .split(' ')
+  .map(w => w[0])
+  .join('')
+  .toUpperCase()
+  .slice(0, 2);
+
+const colors = ['#3129B1', '#62C584', '#F95D51', '#FF8562', '#A09BF8'];
+const bgColor = colors[index % colors.length];
+---
+
+<div class="speaker-card reveal">
+  <div class="speaker-sidebar">
+    <div class="speaker-avatar" style={`background: ${bgColor}`}>
+      {photo ? (
+        <img src={photo} alt={name} style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
+      ) : (
+        initials
+      )}
+    </div>
+    <div>
+      <div class="speaker-name">{name}</div>
+      <div class="speaker-company">{company}</div>
+      {role && <div class="speaker-role">{role}</div>}
+    </div>
+  </div>
+  <div class="speaker-content">
+    <h3>{topic}</h3>
+    {details && details.length > 0 && (
+      <div class="speaker-details">
+        {details.map((detail) => (
+          <div class="speaker-detail-item">{detail}</div>
+        ))}
+      </div>
+    )}
+  </div>
+</div>

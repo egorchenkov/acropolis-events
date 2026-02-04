@@ -1,0 +1,63 @@
+---
+import SEO from '../components/SEO.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  dateISO?: string;
+  location?: string;
+  locationAddress?: string;
+  navLinks?: { label: string; href: string }[];
+}
+
+const { title, description, ogImage, canonicalUrl, dateISO, location, locationAddress, navLinks } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <SEO
+    title={title}
+    description={description}
+    ogImage={ogImage}
+    canonicalUrl={canonicalUrl}
+    dateISO={dateISO}
+    location={location}
+    locationAddress={locationAddress}
+  />
+</head>
+<body>
+  <Header navLinks={navLinks} />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+
+  <!-- Intersection Observer for reveal animations -->
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    document.querySelectorAll('.reveal').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
