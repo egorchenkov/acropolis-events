@@ -1,4 +1,6 @@
 ---
+import { getCollection } from 'astro:content';
+
 interface Props {
   title: string;
   description: string;
@@ -15,6 +17,13 @@ const { title, description, ogImage, canonicalUrl, dateISO, location, locationAd
 const siteUrl = 'https://events.acropolis.uz';
 const fullUrl = canonicalUrl || siteUrl + Astro.url.pathname;
 const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : siteUrl + ogImage) : undefined;
+
+// Get events for ItemList schema on homepage
+let eventsForSchema: { id: string; data: { title: string; description: string } }[] = [];
+if (isHomePage) {
+  const allEvents = await getCollection('events');
+  eventsForSchema = allEvents.sort((a, b) => b.data.dateISO.localeCompare(a.data.dateISO));
+}
 ---
 
 <title>{title}</title>
@@ -23,6 +32,18 @@ const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : siteUrl + 
 <meta name="author" content="Acropolis Integro" />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href={fullUrl} />
+
+{isHomePage && (
+  <>
+    <meta name="geo.region" content="UZ" />
+    <meta name="geo.placename" content="Tashkent" />
+    <meta name="language" content="Russian" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://t.me" />
+  </>
+)}
 
 <!-- Open Graph -->
 <meta property="og:title" content={title} />
@@ -68,7 +89,39 @@ const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : siteUrl + 
     "publisher": {
       "@type": "Organization",
       "name": "Acropolis Integro"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://events.acropolis.uz/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
     }
+  })} />
+)}
+{isHomePage && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://events.acropolis.uz"
+    }]
+  })} />
+)}
+{isHomePage && eventsForSchema.length > 0 && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Мероприятия ACROPOLIS INTEGRO",
+    "description": "Список IT мероприятий инфраструктурного клуба ACROPOLIS",
+    "numberOfItems": eventsForSchema.length,
+    "itemListElement": eventsForSchema.map((event, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "url": `${siteUrl}/${event.id}/`,
+      "name": event.data.title
+    }))
   })} />
 )}
 {dateISO && location && (
