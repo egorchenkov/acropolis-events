@@ -20,10 +20,12 @@ speakers:
     topic: "Kirish so'zi"
   - name: "Роман Егорченков"
     company: "Acropolis Integro"
+    photo: "/images/speakers/egorchenkov.jpg"
     topic: "Kirish so'zi"
   - name: "Игорь Гарнышев"
     company: "Juniper Networks"
     role: "Sales Engineer"
+    photo: "/images/speakers/garnyshev.jpg"
     topic: "Ma'lumotlar markazlari uchun innovatsion yechimlar"
     details:
       - "Juniper Networks bilan kelajak MQM"

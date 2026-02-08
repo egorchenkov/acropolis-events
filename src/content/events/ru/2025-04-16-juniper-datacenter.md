@@ -20,10 +20,12 @@ speakers:
     topic: "Вступительное слово"
   - name: "Роман Егорченков"
     company: "Acropolis Integro"
+    photo: "/images/speakers/egorchenkov.jpg"
     topic: "Вступительное слово"
   - name: "Игорь Гарнышев"
     company: "Juniper Networks"
     role: "Sales Engineer"
+    photo: "/images/speakers/garnyshev.jpg"
     topic: "Innovative Solutions for Data Centers"
     details:
       - "ЦОД будущего с Juniper Networks"

@@ -17,6 +17,7 @@ description: "Biznes-kechlik yakunlari: kiber bardoshlik, konteynerizatsiya va o
 speakers:
   - name: "Дмитрий Иванюк"
     company: "Commvault"
+    photo: "/images/speakers/ivanyuk.jpg"
     topic: "AI davrida kiber bardoshlik"
     details:
       - "Xodimlarning 77% korporativ ma'lumotlarni ommaviy AI-xizmatlarga joylaydi"
@@ -25,6 +26,7 @@ speakers:
       - "Yechimlar: Ransomware himoyasi, AI ma'lumotlar boshqaruvi, Intellektual tiklash agentlari"
   - name: "Иван Екимов"
     company: "SUSE"
+    photo: "/images/speakers/ekimov.jpg"
     topic: "Chegarasiz Kubernetes"
     details:
       - "SUSE Rancher Prime — konteynerlar, virtualizatsiya va AI yuklari uchun yagona platforma"
@@ -35,6 +37,7 @@ speakers:
       - "Rancher 88% YoY o'sish, eng yirik 15 fintexdan 13 tasi SUSE da"
   - name: "Александр Агафонцев"
     company: "Acropolis Integro"
+    photo: "/images/speakers/agafontsev.jpg"
     topic: "O'z hududingizda AI"
     details:
       - "Nima uchun on-premise AI: ma'lumotlar perimetrdan chiqmaydi, to'liq nazorat, bashorat qilinadigan xarajatlar"

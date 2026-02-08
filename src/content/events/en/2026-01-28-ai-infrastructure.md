@@ -17,6 +17,7 @@ description: "Business dinner highlights: cyber resilience, containerization, an
 speakers:
   - name: "Дмитрий Иванюк"
     company: "Commvault"
+    photo: "/images/speakers/ivanyuk.jpg"
     topic: "Cyber resilience in the AI era"
     details:
       - "77% of employees paste corporate data into public AI services"
@@ -25,6 +26,7 @@ speakers:
       - "Solutions: Ransomware protection, AI data governance, Intelligent recovery agents"
   - name: "Иван Екимов"
     company: "SUSE"
+    photo: "/images/speakers/ekimov.jpg"
     topic: "Kubernetes without boundaries"
     details:
       - "SUSE Rancher Prime — a unified platform for containers, virtualization, and AI workloads"
@@ -35,6 +37,7 @@ speakers:
       - "88% YoY Rancher growth, 13/15 largest fintech on SUSE"
   - name: "Александр Агафонцев"
     company: "Acropolis Integro"
+    photo: "/images/speakers/agafontsev.jpg"
     topic: "AI on your own turf"
     details:
       - "Why on-premise AI: data stays within the perimeter, full control, predictable costs"

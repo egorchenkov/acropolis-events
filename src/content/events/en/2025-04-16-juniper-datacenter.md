@@ -20,10 +20,12 @@ speakers:
     topic: "Opening remarks"
   - name: "Роман Егорченков"
     company: "Acropolis Integro"
+    photo: "/images/speakers/egorchenkov.jpg"
     topic: "Opening remarks"
   - name: "Игорь Гарнышев"
     company: "Juniper Networks"
     role: "Sales Engineer"
+    photo: "/images/speakers/garnyshev.jpg"
     topic: "Innovative Solutions for Data Centers"
     details:
       - "Data Center of the Future with Juniper Networks"

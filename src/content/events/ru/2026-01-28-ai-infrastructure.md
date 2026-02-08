@@ -17,6 +17,7 @@ description: "Итоги бизнес-ужина: киберустойчивос
 speakers:
   - name: "Дмитрий Иванюк"
     company: "Commvault"
+    photo: "/images/speakers/ivanyuk.jpg"
     topic: "Киберустойчивость в эпоху AI"
     details:
       - "77% сотрудников вставляют корпоративные данные в публичные AI-сервисы"
@@ -25,6 +26,7 @@ speakers:
       - "Решения: Защита от ransomware, Governance AI-данных, Интеллектуальные агенты recovery"
   - name: "Иван Екимов"
     company: "SUSE"
+    photo: "/images/speakers/ekimov.jpg"
     topic: "Kubernetes без границ"
     details:
       - "SUSE Rancher Prime — единая платформа для контейнеров, виртуализации и AI-нагрузок"
@@ -35,6 +37,7 @@ speakers:
       - "88% YoY рост Rancher, 13/15 крупнейших финтех на SUSE"
   - name: "Александр Агафонцев"
     company: "Acropolis Integro"
+    photo: "/images/speakers/agafontsev.jpg"
     topic: "AI на своей территории"
     details:
       - "Зачем on-premise AI: данные не покидают периметр, полный контроль, предсказуемые затраты"

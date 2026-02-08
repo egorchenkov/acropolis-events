@@ -93,7 +93,8 @@ const firstPhoto = hasPhotos ? data.photos![0] : undefined;
   </section>
 
   <!-- Program -->
-  {hasProgram && (
+  <!-- Program (hidden when speakers section is present to avoid duplication) -->
+  {hasProgram && !hasSpeakers && (
     <section class="section section-light" id="program">
       <div class="container">
         <div class="section-header reveal">
@@ -115,14 +116,14 @@ const firstPhoto = hasPhotos ? data.photos![0] : undefined;
   )}
 
   <!-- Speakers -->
-  {hasSpeakers && data.speakers!.some((s: any) => s.details && s.details.length > 0) && (
+  {hasSpeakers && (
     <section class="section" id="speakers">
       <div class="container">
         <div class="section-header reveal">
           <h2>{t(lang, 'event.speakers')}</h2>
         </div>
         <div class="speakers-list">
-          {data.speakers!.filter((s: any) => s.details && s.details.length > 0).map((speaker: any, i: number) => (
+          {data.speakers!.map((speaker: any, i: number) => (
             <SpeakerCard
               name={speaker.name}
               company={speaker.company}
