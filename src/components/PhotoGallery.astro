@@ -1,22 +1,26 @@
 ---
+import { t, type Lang } from '../i18n';
+
 interface Props {
   photos: string[];
   title?: string;
+  lang: Lang;
 }
 
-const { photos, title = 'Галерея' } = Astro.props;
+const { photos, title, lang } = Astro.props;
+const galleryTitle = title || t(lang, 'event.gallery');
 ---
 
 {photos.length > 0 && (
   <section class="section section-light" id="gallery">
     <div class="container">
       <div class="section-header reveal">
-        <h2>{title}</h2>
+        <h2>{galleryTitle}</h2>
       </div>
       <div class="gallery-grid">
         {photos.map((photo, i) => (
           <div class="gallery-item reveal" data-index={i}>
-            <img src={photo} alt={`Фото ${i + 1}`} loading="lazy" />
+            <img src={photo} alt={`${t(lang, 'gallery.photo')} ${i + 1}`} loading="lazy" />
           </div>
         ))}
       </div>
@@ -25,9 +29,9 @@ const { photos, title = 'Галерея' } = Astro.props;
 
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" aria-label="Закрыть">×</button>
-    <button class="lightbox-nav lightbox-prev" aria-label="Назад">‹</button>
-    <button class="lightbox-nav lightbox-next" aria-label="Вперёд">›</button>
+    <button class="lightbox-close" aria-label={t(lang, 'gallery.close')}>×</button>
+    <button class="lightbox-nav lightbox-prev" aria-label={t(lang, 'gallery.prev')}>‹</button>
+    <button class="lightbox-nav lightbox-next" aria-label={t(lang, 'gallery.next')}>›</button>
     <img src="" alt="" id="lightbox-img" />
   </div>
 

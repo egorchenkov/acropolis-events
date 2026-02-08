@@ -3,6 +3,7 @@ import SEO from '../components/SEO.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import type { Lang } from '../i18n';
 
 interface Props {
   title: string;
@@ -14,13 +15,14 @@ interface Props {
   locationAddress?: string;
   navLinks?: { label: string; href: string }[];
   isHomePage?: boolean;
+  lang: Lang;
 }
 
-const { title, description, ogImage, canonicalUrl, dateISO, location, locationAddress, navLinks, isHomePage } = Astro.props;
+const { title, description, ogImage, canonicalUrl, dateISO, location, locationAddress, navLinks, isHomePage, lang } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang={lang}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,14 +36,15 @@ const { title, description, ogImage, canonicalUrl, dateISO, location, locationAd
     location={location}
     locationAddress={locationAddress}
     isHomePage={isHomePage}
+    lang={lang}
   />
 </head>
 <body>
-  <Header navLinks={navLinks} />
+  <Header navLinks={navLinks} lang={lang} />
   <main>
     <slot />
   </main>
-  <Footer />
+  <Footer lang={lang} />
 
   <!-- Intersection Observer for reveal animations -->
   <script>

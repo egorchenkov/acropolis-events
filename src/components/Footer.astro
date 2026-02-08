@@ -1,9 +1,16 @@
 ---
+import { t, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
 const year = new Date().getFullYear();
 ---
 
 <footer class="footer">
   <div class="container">
-    <p>© {year} <a href="https://acropolis.uz" target="_blank" rel="noopener">Acropolis Integro</a>. Все права защищены.</p>
+    <p>© {year} <a href="https://acropolis.uz" target="_blank" rel="noopener">Acropolis Integro</a>. {t(lang, 'footer.rights')}</p>
   </div>
 </footer>

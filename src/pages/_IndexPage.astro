@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EventCard from '../components/EventCard.astro';
+import { getCollection } from 'astro:content';
+import { t, localizedPath, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const allEvents = await getCollection('events', (entry) => {
+  return entry.id.startsWith(`${lang}/`);
+});
+
+const sortedEvents = allEvents.sort((a, b) =>
+  b.data.dateISO.localeCompare(a.data.dateISO)
+);
+
+function getSlug(id: string): string {
+  return id.split('/').slice(1).join('/');
+}
+---
+
+<BaseLayout
+  title={t(lang, 'index.title')}
+  description={t(lang, 'index.description')}
+  ogImage="/images/og-cover.jpg"
+  isHomePage={true}
+  lang={lang}
+>
+  <!-- Hero -->
+  <section class="hero hero-index">
+    <div class="hero-inner">
+      <div class="hero-badge">{t(lang, 'index.heroBadge')}</div>
+      <h1>ACROPOLIS INTEGRO<br />Events</h1>
+      <p class="hero-subtitle" set:html={t(lang, 'index.heroSubtitle')} />
+    </div>
+    <svg class="hero-wave" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0 80V40C240 0 480 0 720 40C960 80 1200 80 1440 40V80H0Z" fill="#f8f8fc"/>
+    </svg>
+  </section>
+
+  <!-- Events List -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>{t(lang, 'index.allEvents')}</h2>
+        <p>{t(lang, 'index.allEventsSubtitle')}</p>
+      </div>
+      <div class="events-grid">
+        {sortedEvents.map((event) => (
+          <EventCard
+            slug={localizedPath(lang, `/${getSlug(event.id)}/`)}
+            title={event.data.title}
+            date={event.data.date}
+            location={event.data.location}
+            description={event.data.description}
+            partners={event.data.partners}
+            photos={event.data.photos}
+            eventType={event.data.eventType}
+            lang={lang}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <div class="container cta-inner">
+      <h2 class="reveal">{t(lang, 'index.ctaTitle')}</h2>
+      <p class="reveal reveal-delay-1">
+        {t(lang, 'index.ctaSubtitle')}
+      </p>
+      <div class="cta-buttons reveal reveal-delay-2">
+        <a href="https://t.me/acropolis_integro" target="_blank" rel="noopener" class="btn btn-primary">
+          {t(lang, 'index.ctaTelegram')}
+        </a>
+        <a href="mailto:info@acropolis.uz" class="btn btn-outline">
+          info@acropolis.uz
+        </a>
+      </div>
+      <div class="cta-contacts reveal reveal-delay-3">
+        <span class="cta-contact-item">
+          <a href="https://acropolis.uz" target="_blank" rel="noopener">acropolis.uz</a>
+        </span>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

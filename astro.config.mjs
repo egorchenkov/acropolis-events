@@ -3,5 +3,21 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://events.acropolis.uz',
-  integrations: [sitemap()],
+  i18n: {
+    defaultLocale: 'ru',
+    locales: ['ru', 'en', 'uz'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
+  integrations: [sitemap({
+    i18n: {
+      defaultLocale: 'ru',
+      locales: {
+        ru: 'ru',
+        en: 'en',
+        uz: 'uz',
+      },
+    },
+  })],
 });

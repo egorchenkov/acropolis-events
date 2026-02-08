@@ -4,6 +4,7 @@ import { glob } from 'astro/loaders';
 const events = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/events' }),
   schema: z.object({
+    lang: z.enum(['ru', 'en', 'uz']).default('ru'),
     title: z.string(),
     subtitle: z.string().optional(),
     date: z.string(),

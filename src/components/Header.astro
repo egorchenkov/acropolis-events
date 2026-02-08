@@ -1,19 +1,23 @@
 ---
+import { t, localizedPath, type Lang } from '../i18n';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
 interface Props {
   navLinks?: { label: string; href: string }[];
+  lang: Lang;
 }
 
-const { navLinks } = Astro.props;
+const { navLinks, lang } = Astro.props;
 
 const defaultLinks = [
-  { label: 'Мероприятия', href: '/' },
+  { label: t(lang, 'nav.events'), href: localizedPath(lang, '/') },
 ];
 const links = navLinks || defaultLinks;
 ---
 
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">
+    <a href={localizedPath(lang, '/')} class="nav-logo">
       <img src="/images/logo-color.svg" alt="Acropolis" width="36" height="36" />
       <span>ACROPOLIS INTEGRO</span>
     </a>
@@ -21,9 +25,10 @@ const links = navLinks || defaultLinks;
       {links.map((link) => (
         <a href={link.href}>{link.label}</a>
       ))}
-      <a href="#contact" class="nav-cta">Связаться →</a>
+      <a href="#contact" class="nav-cta">{t(lang, 'nav.contact')}</a>
     </div>
-    <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Меню">
+    <LanguageSwitcher lang={lang} />
+    <button class="nav-mobile-toggle" id="nav-toggle" aria-label={t(lang, 'nav.menu')}>
       <span></span>
       <span></span>
       <span></span>

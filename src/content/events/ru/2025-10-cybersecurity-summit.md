@@ -1,4 +1,5 @@
 ---
+lang: "ru"
 title: "Cyber Security Summit Central Eurasia 2025"
 subtitle: "Участие Acropolis Integro совместно с Commvault"
 date: "Октябрь 2025"

@@ -1,4 +1,6 @@
 ---
+import { t, type Lang } from '../i18n';
+
 interface Props {
   slug: string;
   title: string;
@@ -8,14 +10,15 @@ interface Props {
   partners: { name: string; logo?: string }[];
   photos?: string[];
   eventType: 'own' | 'participation';
+  lang: Lang;
 }
 
-const { slug, title, date, location, description, partners, photos, eventType } = Astro.props;
+const { slug, title, date, location, description, partners, photos, eventType, lang } = Astro.props;
 const firstPhoto = photos && photos.length > 0 ? photos[0] : null;
-const typeLabel = eventType === 'own' ? 'Собственное мероприятие' : 'Участие';
+const typeLabel = eventType === 'own' ? t(lang, 'card.ownEvent') : t(lang, 'card.participation');
 ---
 
-<a href={`/${slug}/`} class="event-card reveal">
+<a href={slug} class="event-card reveal">
   <div class="event-card-image">
     {firstPhoto ? (
       <img src={firstPhoto} alt={title} loading="lazy" />
@@ -43,6 +46,6 @@ const typeLabel = eventType === 'own' ? 'Собственное мероприя
         </span>
       ))}
     </div>
-    <span class="event-card-link">Подробнее →</span>
+    <span class="event-card-link">{t(lang, 'card.readMore')}</span>
   </div>
 </a>
