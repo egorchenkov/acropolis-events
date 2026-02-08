@@ -1127,6 +1127,10 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .nav-inner {
+    padding: 0 1rem;
+  }
+
   .nav-links {
     display: none;
     position: absolute;
