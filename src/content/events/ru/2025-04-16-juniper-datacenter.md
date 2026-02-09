@@ -54,6 +54,54 @@ photos:
   - "/images/events/2025-04-16/04.jpg"
   - "/images/events/2025-04-16/06.jpg"
   - "/images/events/2025-04-16/12.jpg"
+conclusions:
+  - title: "Cloud-Ready Data Center"
+    items:
+      - "Архитектура CRDC: масштабируемая IP-фабрика 100/400/800G"
+      - "SDN-оверлей для гибридных облачных сред"
+      - "Сквозная безопасность и микросегментация"
+      - "Автоматизация полного жизненного цикла ЦОД (Day 0/1/2+)"
+  - title: "AI/ML-инфраструктура"
+    items:
+      - "Ethernet-фабрика как альтернатива InfiniBand — без vendor lock-in"
+      - "Rail-оптимизированный дизайн для GPU-кластеров"
+      - "RoCEv2 и DCQCN для управления перегрузками AI-трафика"
+      - "Juniper участвует в крупнейших AI-кластерах мира (100K H100 GPU)"
+  - title: "Интеллектуальное управление"
+    items:
+      - "Apstra — intent-based networking с мультивендорной поддержкой"
+      - "Marvis VNA — AI-driven операционная аналитика"
+      - "Единая автоматизация frontend/backend/storage фабрик"
+      - "EVPN-VXLAN для гибкой связности и DCI между ЦОДами"
+recommendations:
+  immediate:
+    - "Провести аудит текущей сетевой инфраструктуры ЦОД на соответствие архитектуре CRDC"
+    - "Оценить потребности в GPU-нагрузках и готовность сети к AI/ML-кластерам"
+    - "Протестировать Juniper Apstra в виртуальной лаборатории (vLabs) для автоматизации фабрики"
+  strategic:
+    - "Спланировать миграцию на EVPN-VXLAN для масштабируемой связности между подами и ЦОДами"
+    - "Внедрить intent-based подход к управлению сетью с непрерывной валидацией"
+    - "Рассмотреть Ethernet-фабрику Juniper для AI/ML-инфраструктуры вместо InfiniBand"
+    - "Обеспечить интегрированную безопасность ЦОД с помощью SRX и микросегментации"
+techStack:
+  - name: "Juniper QFX Series"
+    description: "Коммутация ЦОД (100/400/800G)"
+    color: "green"
+  - name: "Juniper PTX Series"
+    description: "Spine / DCI"
+    color: "teal"
+  - name: "Juniper Apstra"
+    description: "Intent-Based Networking"
+    color: "blue"
+  - name: "Marvis VNA"
+    description: "AIOps для ЦОД"
+    color: "purple"
+  - name: "EVPN-VXLAN"
+    description: "Сетевой оверлей"
+    color: "orange"
+  - name: "Juniper SRX"
+    description: "Безопасность ЦОД"
+    color: "red"
 ctaQuestion: "Готовы построить ЦОД будущего?"
 contact:
   email: "info@acropolis.uz"
@@ -62,3 +110,9 @@ contact:
 ---
 
 16 апреля мы провели закрытую встречу инфраструктурного клуба Acropolis, посвящённую решениям Juniper Networks для современных центров обработки данных. Эксперты Juniper представили концепцию Cloud-Ready Data Center (CRDC) — архитектуру, которая позволяет строить масштабируемую, безопасную и готовую к облачным нагрузкам инфраструктуру.
+
+Juniper Networks — лидер Gartner Magic Quadrant 2025 в области коммутации ЦОД, занимает первое место по критерию Enterprise Data Center Network Buildout. В ходе презентации были рассмотрены четыре фундаментальных компонента CRDC: масштабируемая IP-фабрика с поддержкой 100/400/800G, SDN-оверлей на базе EVPN-VXLAN, автоматизация операций через Juniper Apstra и сквозная безопасность с микросегментацией.
+
+Отдельный блок был посвящён сетевой инфраструктуре для AI/ML — архитектуре GPU-кластеров с rail-оптимизированным дизайном, требованиям к frontend/backend/storage фабрикам и преимуществам Ethernet перед InfiniBand: отсутствие vendor lock-in, операционная консистентность и более низкая стоимость. Juniper обеспечивает сетевую инфраструктуру крупнейших AI-кластеров мира, включая кластер на 100 000 GPU H100.
+
+Также были представлены возможности Juniper Apstra для intent-based управления мультивендорными фабриками и Marvis VNA для AI-driven операционной аналитики. Участники обсудили варианты архитектуры DCI, портфолио оборудования QFX/PTX/ACX/SRX и подходы к интегрированной безопасности ЦОД.
