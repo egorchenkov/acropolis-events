@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80">
+    <text x="0" y="50" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="56" fill="currentColor">VEHI</text>
+    <circle cx="202" cy="22" r="14" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <text x="202" y="28" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="15" fill="currentColor" text-anchor="middle">KZ</text>
+    <text x="0" y="74" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="10.5" fill="currentColor" letter-spacing="2.5">INTELLIGENT SOLUTIONS FOR EVERYONE</text>
+</svg>

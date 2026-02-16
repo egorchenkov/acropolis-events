@@ -20,6 +20,7 @@ This site supports three languages. **All changes must be applied to all three l
 4. Non-translatable fields must be **identical** across all three files: `dateISO`, `partners` (with logos), `photos`, `contact`, `eventType`, `techStack` (colors).
 5. Translatable fields: `title`, `subtitle`, `date` (localized format), `location`, `description`, `speakers` (topics, details — names stay unchanged), `program` (titles), `conclusions`, `recommendations`, `ctaQuestion`, markdown body.
 6. Date formats: RU: "28 января 2026", EN: "January 28, 2026", UZ: "2026-yil 28-yanvar".
+7. **Partner logos are mandatory.** Every partner in the `partners` list must have a `logo` field. Find logos from: PDF invitations, official partner websites, or vector logo repositories (worldvectorlogo, seekvectorlogo, brandfetch). Save as SVG to `public/images/partners/<name>.svg`. Prefer `currentColor` for text fills to adapt to theme. Existing logos: `commvault.svg`, `fortis.svg`, `juniper.svg`, `ieit-systems.svg`, `suse.svg`, `techbridge.png`, `hitachi-vantara.svg`, `brocade.svg`, `vehi.svg`, `erc.svg`.
 
 ### Modifying UI text (navigation, buttons, labels)
 
