@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 60">
+  <defs>
+    <style>
+      .checkpoint-text { font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 22px; fill: currentColor; }
+      .checkpoint-sub { font-family: Arial, Helvetica, sans-serif; font-weight: 400; font-size: 11px; fill: currentColor; }
+    </style>
+  </defs>
+  <!-- Check Point logo mark - stylized checkmark in circle -->
+  <g fill="currentColor">
+    <circle cx="24" cy="30" r="22" fill="none" stroke="currentColor" stroke-width="3"/>
+    <path d="M12 30 L20 38 L36 18" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="54" y="28" class="checkpoint-text">CHECK POINT</text>
+  <text x="54" y="44" class="checkpoint-sub">SOFTWARE TECHNOLOGIES</text>
+</svg>

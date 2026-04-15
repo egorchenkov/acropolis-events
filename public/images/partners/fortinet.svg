@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60">
+  <defs>
+    <style>
+      .fortinet-text { font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 28px; fill: currentColor; letter-spacing: 1px; }
+    </style>
+  </defs>
+  <!-- Fortinet logo mark - stylized shield with F -->
+  <g fill="currentColor">
+    <path d="M6 10 L22 2 L38 10 L38 32 C38 42 22 54 22 54 C22 54 6 42 6 32 Z M12 14 L22 8 L32 14 L32 30 C32 36 22 44 22 44 C22 44 12 36 12 30 Z"/>
+    <path d="M18 18 L28 18 L28 22 L22 22 L22 26 L26 26 L26 30 L22 30 L22 38 L18 38 Z"/>
+  </g>
+  <text x="46" y="37" class="fortinet-text">FORTINET</text>
+</svg>

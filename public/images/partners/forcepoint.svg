@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60">
+  <defs>
+    <style>
+      .forcepoint-text { font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 26px; fill: currentColor; letter-spacing: 1px; }
+    </style>
+  </defs>
+  <!-- Forcepoint logo mark - stylized arrow/shield -->
+  <g fill="currentColor">
+    <path d="M22 6 L40 30 L22 54 L4 30 Z M22 14 L32 30 L22 46 L12 30 Z"/>
+    <polygon points="22,20 28,30 22,40 16,30"/>
+  </g>
+  <text x="48" y="38" class="forcepoint-text">FORCEPOINT</text>
+</svg>

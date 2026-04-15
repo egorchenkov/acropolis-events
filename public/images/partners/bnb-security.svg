@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 60">
+  <defs>
+    <style>
+      .bnb-text { font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 28px; fill: currentColor; letter-spacing: 2px; }
+      .bnb-sub { font-family: Arial, Helvetica, sans-serif; font-weight: 400; font-size: 12px; fill: currentColor; letter-spacing: 3px; }
+    </style>
+  </defs>
+  <!-- B&B Security logo mark - stylized shield with B&B -->
+  <g fill="currentColor">
+    <path d="M4 8 L22 2 L40 8 L40 34 C40 44 22 56 22 56 C22 56 4 44 4 34 Z M10 12 L22 8 L34 12 L34 32 C34 38 22 48 22 48 C22 48 10 38 10 32 Z"/>
+    <path d="M16 18 L16 40 L24 40 C28 40 30 37 30 34 C30 32 29 30 27 29 C29 28 30 26 30 24 C30 21 28 18 24 18 Z M20 22 L24 22 C25.5 22 26.5 23 26.5 24.5 C26.5 26 25.5 27 24 27 L20 27 Z M20 30 L24 30 C25.5 30 27 31 27 33 C27 35 25.5 36 24 36 L20 36 Z"/>
+  </g>
+  <text x="48" y="28" class="bnb-text">B&amp;B</text>
+  <text x="48" y="46" class="bnb-sub">SECURITY</text>
+</svg>

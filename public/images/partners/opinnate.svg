@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60">
+  <defs>
+    <style>
+      .opinnate-text { font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 26px; fill: currentColor; letter-spacing: 0.5px; }
+    </style>
+  </defs>
+  <!-- Opinnate logo mark - stylized network/firewall -->
+  <g fill="currentColor">
+    <rect x="6" y="12" width="4" height="36" rx="1"/>
+    <rect x="14" y="18" width="4" height="24" rx="1"/>
+    <rect x="22" y="8" width="4" height="44" rx="1"/>
+    <rect x="30" y="22" width="4" height="16" rx="1"/>
+    <rect x="38" y="14" width="4" height="32" rx="1"/>
+  </g>
+  <text x="50" y="38" class="opinnate-text">OPINNATE</text>
+</svg>
