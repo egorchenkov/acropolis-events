@@ -1,8 +1,8 @@
 ---
 lang: "en"
 title: "Two-Day Technical Training on the Nutanix Platform"
-subtitle: "From HCI architecture to automation and disaster recovery — April 16–17, 2026, Baku"
-date: "April 16–17, 2026"
+subtitle: "From HCI architecture to automation and disaster recovery — April 2026, Baku"
+date: "April 2026"
 dateISO: "2026-04-16"
 location: "Baku, Azerbaijan"
 eventType: "own"
@@ -11,9 +11,9 @@ partners:
     logo: "/images/partners/nutanix.svg"
 description: "ACROPOLIS INTEGRO delivered a two-day technical training on Nutanix for customer teams. A deep dive into HCI architecture, AOS operations, replication, automation, and database management."
 program:
-  - time: "Day 1 — April 16"
+  - time: "Day 1"
     title: "Platform fundamentals: HCI, AOS/CVM, Data Locality, Prism Element, RF2/RF3, compression, deduplication, erasure coding"
-  - time: "Day 2 — April 17"
+  - time: "Day 2"
     title: "Operations and automation: Prism Central, Flow Network Security, Protection Policy, Recovery Plan, X-Play, NDB, External Storage"
 conclusions:
   - title: "HCI Architecture"
@@ -72,7 +72,7 @@ contact:
   website: "acropolis.uz"
 ---
 
-On April 16–17, 2026, the ACROPOLIS INTEGRO team delivered a closed two-day technical training on the **Nutanix** platform for the engineering teams of our customers.
+In April 2026, the ACROPOLIS INTEGRO team delivered a closed two-day technical training on the **Nutanix** platform for the engineering teams of our customers.
 
 The training was structured not as a product pitch but as a working session — with real-world cases, architectural decisions, and operational nuances that are not found in the official documentation.
 

@@ -1,8 +1,8 @@
 ---
 lang: "uz"
 title: "Nutanix platformasi bo'yicha ikki kunlik texnik o'quv"
-subtitle: "HCI arxitekturasidan avtomatlashtirish va disaster recovery'gacha — 2026-yil 16–17-aprel, Boku"
-date: "2026-yil 16–17-aprel"
+subtitle: "HCI arxitekturasidan avtomatlashtirish va disaster recovery'gacha — 2026-yil aprel, Boku"
+date: "2026-yil aprel"
 dateISO: "2026-04-16"
 location: "Boku, Ozarbayjon"
 eventType: "own"
@@ -11,9 +11,9 @@ partners:
     logo: "/images/partners/nutanix.svg"
 description: "ACROPOLIS INTEGRO buyurtmachilar jamoalari uchun Nutanix bo'yicha ikki kunlik texnik o'quv o'tkazdi. HCI arxitekturasi, AOS ekspluatatsiyasi, replikatsiya, avtomatlashtirish va ma'lumotlar bazasini boshqarishga chuqur sho'ng'ish."
 program:
-  - time: "1-kun — 16-aprel"
+  - time: "1-kun"
     title: "Platforma asoslari: HCI, AOS/CVM, Data Locality, Prism Element, RF2/RF3, compression, deduplication, erasure coding"
-  - time: "2-kun — 17-aprel"
+  - time: "2-kun"
     title: "Ekspluatatsiya va avtomatlashtirish: Prism Central, Flow Network Security, Protection Policy, Recovery Plan, X-Play, NDB, External Storage"
 conclusions:
   - title: "HCI arxitekturasi"
@@ -72,7 +72,7 @@ contact:
   website: "acropolis.uz"
 ---
 
-2026-yil 16–17-aprel kunlari ACROPOLIS INTEGRO jamoasi buyurtmachilarning muhandislik jamoalari uchun **Nutanix** platformasi bo'yicha yopiq ikki kunlik texnik o'quv o'tkazdi.
+2026-yil aprel oyida ACROPOLIS INTEGRO jamoasi buyurtmachilarning muhandislik jamoalari uchun **Nutanix** platformasi bo'yicha yopiq ikki kunlik texnik o'quv o'tkazdi.
 
 O'quv mahsulot taqdimoti sifatida emas, balki ishchi sessiya sifatida qurilgan — rasmiy hujjatlarda topilmaydigan haqiqiy keyslar, arxitektura yechimlari va ekspluatatsion nuanslar tahlili bilan.
 

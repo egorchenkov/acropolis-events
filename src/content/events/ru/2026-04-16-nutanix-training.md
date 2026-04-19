@@ -1,8 +1,8 @@
 ---
 lang: "ru"
 title: "Двухдневное техническое обучение по платформе Nutanix"
-subtitle: "От HCI-архитектуры до автоматизации и disaster recovery — 16–17 апреля 2026, Баку"
-date: "16–17 апреля 2026"
+subtitle: "От HCI-архитектуры до автоматизации и disaster recovery — апрель 2026, Баку"
+date: "апрель 2026"
 dateISO: "2026-04-16"
 location: "Баку, Азербайджан"
 eventType: "own"
@@ -11,9 +11,9 @@ partners:
     logo: "/images/partners/nutanix.svg"
 description: "ACROPOLIS INTEGRO провела двухдневное техническое обучение по Nutanix для команд заказчиков. Глубокое погружение в HCI-архитектуру, эксплуатацию AOS, репликацию, автоматизацию и управление БД."
 program:
-  - time: "День 1 — 16 апреля"
+  - time: "День 1"
     title: "Основы и устройство платформы: HCI, AOS/CVM, Data Locality, Prism Element, RF2/RF3, compression, deduplication, erasure coding"
-  - time: "День 2 — 17 апреля"
+  - time: "День 2"
     title: "Эксплуатация и автоматизация: Prism Central, Flow Network Security, Protection Policy, Recovery Plan, X-Play, NDB, External Storage"
 conclusions:
   - title: "HCI-архитектура"
@@ -72,7 +72,7 @@ contact:
   website: "acropolis.uz"
 ---
 
-16–17 апреля 2026 года команда ACROPOLIS INTEGRO провела закрытое двухдневное техническое обучение по платформе **Nutanix** для инженерных команд наших заказчиков.
+В апреле 2026 года команда ACROPOLIS INTEGRO провела закрытое двухдневное техническое обучение по платформе **Nutanix** для инженерных команд наших заказчиков.
 
 Обучение построено не как презентация продукта, а как рабочая сессия — с разбором реальных кейсов, архитектурных решений и эксплуатационных нюансов, которые не найти в официальной документации.
 
