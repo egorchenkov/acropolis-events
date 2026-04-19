@@ -11,14 +11,16 @@ interface Props {
   ogImage?: string;
   canonicalUrl?: string;
   dateISO?: string;
+  endDateISO?: string;
   location?: string;
   locationAddress?: string;
+  speakers?: Array<{ name: string; company?: string; role?: string }>;
   navLinks?: { label: string; href: string }[];
   isHomePage?: boolean;
   lang: Lang;
 }
 
-const { title, description, ogImage, canonicalUrl, dateISO, location, locationAddress, navLinks, isHomePage, lang } = Astro.props;
+const { title, description, ogImage, canonicalUrl, dateISO, endDateISO, location, locationAddress, speakers, navLinks, isHomePage, lang } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -26,15 +28,22 @@ const { title, description, ogImage, canonicalUrl, dateISO, location, locationAd
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#3129B1" />
   <SEO
     title={title}
     description={description}
     ogImage={ogImage}
     canonicalUrl={canonicalUrl}
     dateISO={dateISO}
+    endDateISO={endDateISO}
     location={location}
     locationAddress={locationAddress}
+    speakers={speakers}
     isHomePage={isHomePage}
     lang={lang}
   />

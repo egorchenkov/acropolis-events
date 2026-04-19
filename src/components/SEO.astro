@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { t, getAlternateUrls, type Lang } from '../i18n';
+import { t, getAlternateUrls, localizedPath, type Lang } from '../i18n';
 
 interface Props {
   title: string;
@@ -8,18 +8,41 @@ interface Props {
   ogImage?: string;
   canonicalUrl?: string;
   dateISO?: string;
+  endDateISO?: string;
   location?: string;
   locationAddress?: string;
+  speakers?: Array<{ name: string; company?: string; role?: string }>;
   isHomePage?: boolean;
   lang: Lang;
 }
 
-const { title, description, ogImage, canonicalUrl, dateISO, location, locationAddress, isHomePage, lang } = Astro.props;
+const {
+  title,
+  description,
+  ogImage,
+  canonicalUrl,
+  dateISO,
+  endDateISO,
+  location,
+  locationAddress,
+  speakers,
+  isHomePage,
+  lang,
+} = Astro.props;
 
 const siteUrl = 'https://events.acropolis.uz';
 const fullUrl = canonicalUrl || siteUrl + Astro.url.pathname;
 const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : siteUrl + ogImage) : undefined;
+const ogImageExt = fullOgImage ? fullOgImage.split('.').pop()?.toLowerCase() : undefined;
+const ogImageType = ogImageExt === 'png' ? 'image/png'
+  : ogImageExt === 'webp' ? 'image/webp'
+  : ogImageExt === 'svg' ? 'image/svg+xml'
+  : 'image/jpeg';
 const alternates = getAlternateUrls(Astro.url);
+
+const isEventPage = Boolean(dateISO && location);
+const ogType = isEventPage ? 'article' : 'website';
+const eventName = isEventPage ? title.replace(' — ACROPOLIS INTEGRO Events', '').replace(' — ACROPOLIS INTEGRO', '') : title;
 
 // Get events for ItemList schema on homepage
 let eventsForSchema: { id: string; data: { title: string; description: string } }[] = [];
@@ -33,7 +56,7 @@ if (isHomePage) {
 <meta name="description" content={description} />
 <meta name="keywords" content={t(lang, 'seo.keywords')} />
 <meta name="author" content="Acropolis Integro" />
-<meta name="robots" content="index, follow" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
 <link rel="canonical" href={fullUrl} />
 
 <!-- hreflang -->
@@ -42,6 +65,10 @@ if (isHomePage) {
 <link rel="alternate" hreflang="uz" href={siteUrl + alternates.uz} />
 <link rel="alternate" hreflang="x-default" href={siteUrl + alternates.ru} />
 
+<!-- Preconnect / DNS prefetch (global) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="dns-prefetch" href="https://t.me" />
+
 {isHomePage && (
   <>
     <meta name="geo.region" content="UZ" />
@@ -49,17 +76,16 @@ if (isHomePage) {
     <meta name="language" content={t(lang, 'seo.language')} />
     <meta name="revisit-after" content="7 days" />
     <meta name="rating" content="general" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://t.me" />
   </>
 )}
 
 <!-- Open Graph -->
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:type" content="website" />
+<meta property="og:type" content={ogType} />
 <meta property="og:url" content={fullUrl} />
 {fullOgImage && <meta property="og:image" content={fullOgImage} />}
+{fullOgImage && <meta property="og:image:type" content={ogImageType} />}
 <meta property="og:site_name" content="ACROPOLIS INTEGRO Events" />
 <meta property="og:locale" content={t(lang, 'seo.ogLocale')} />
 
@@ -133,12 +159,35 @@ if (isHomePage) {
     }))
   })} />
 )}
-{dateISO && location && (
+{isEventPage && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": t(lang, 'seo.breadcrumbHome'),
+        "item": siteUrl + localizedPath(lang, '/')
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": eventName,
+        "item": fullUrl
+      }
+    ]
+  })} />
+)}
+{isEventPage && (
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": title.replace(' — ACROPOLIS INTEGRO Events', '').replace(' — ACROPOLIS INTEGRO', ''),
+    "name": eventName,
     "startDate": dateISO,
+    ...(endDateISO ? { endDate: endDateISO } : {}),
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "location": {
       "@type": "Place",
       "name": location,
@@ -150,5 +199,23 @@ if (isHomePage) {
       "url": "https://acropolis.uz",
     },
     "description": description,
+    "url": fullUrl,
+    ...(fullOgImage ? { image: [fullOgImage] } : {}),
+    ...(speakers && speakers.length > 0 ? {
+      performer: speakers.map((s) => ({
+        "@type": "Person",
+        name: s.name,
+        ...(s.company ? { affiliation: { "@type": "Organization", name: s.company } } : {}),
+        ...(s.role ? { jobTitle: s.role } : {}),
+      }))
+    } : {}),
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": fullUrl,
+      "validFrom": dateISO,
+    }
   })} />
 )}
