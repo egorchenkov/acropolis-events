@@ -65,10 +65,17 @@ const firstPhoto = hasPhotos ? data.photos![0] : undefined;
       </div>
       <div class="hero-partners">
         {data.partners.map((p: any) => (
-          <span class="hero-partner">
-            {p.logo && <img src={p.logo} alt={p.name} class="hero-partner-logo" />}
-            {!p.logo && p.name}
-          </span>
+          p.url ? (
+            <a href={p.url} target="_blank" rel="noopener" class="hero-partner" title={p.name}>
+              {p.logo && <img src={p.logo} alt={p.name} class="hero-partner-logo" />}
+              {!p.logo && p.name}
+            </a>
+          ) : (
+            <span class="hero-partner">
+              {p.logo && <img src={p.logo} alt={p.name} class="hero-partner-logo" />}
+              {!p.logo && p.name}
+            </span>
+          )
         ))}
       </div>
     </div>

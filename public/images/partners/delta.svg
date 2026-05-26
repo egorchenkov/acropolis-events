@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <g fill="currentColor">
+    <path d="M40 8 L75 68 L5 68 Z M40 24 L21 60 L59 60 Z" fill-rule="evenodd"/>
+    <circle cx="40" cy="44" r="6"/>
+    <text x="92" y="60" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="52" letter-spacing="2">DELTA</text>
+  </g>
+</svg>

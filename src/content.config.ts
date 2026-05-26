@@ -14,6 +14,7 @@ const events = defineCollection({
     partners: z.array(z.object({
       name: z.string(),
       logo: z.string().optional(),
+      url: z.string().optional(),
     })),
     description: z.string(),
     speakers: z.array(z.object({
