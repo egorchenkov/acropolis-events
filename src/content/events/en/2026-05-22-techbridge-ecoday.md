@@ -51,6 +51,28 @@ speakers:
       - "Mist AI and Marvis Assistant — AIOps for campus networks, 20× Gartner Magic Quadrant leader"
       - "Wi-Fi 7 portfolio: AP47/AP37/AP27 (Mist) and Aruba 730/740/750 series"
       - "AP723H — the first dual-platform Access Point (Mist Cloud or Aruba Central, chosen at boot)"
+  - name: "H3C Technologies Tashkent"
+    company: "H3C"
+    role: "H3C Tashkent LLC team"
+    topic: "Boosting Green Practice with AI-enabled Computing × Connectivity"
+    details:
+      - "«All in Green» — H3C global strategy: 800+ green DCs, annual Sustainability Report"
+      - "AI evolution: Perception → Generative → Agentic → Physical AI"
+      - "«AI for ALL» + «AI in ALL»: AI/HPC Scheduling Platform, LinSeer AI Integration Platform"
+      - "AI-ready infrastructure: S12500 AI (1.6T), CR19000, LinSeer Cube, UniStor Polaris X20000, SecPath M9000-X"
+      - "AI-Enabled Campus: Wi-Fi 4i+ (92% AI-model accuracy), AI-ECN, AI-ECO, AI-OC (2.5:1 compression, 50% bandwidth savings), AI-SOC"
+      - "First WiFi-8 device launched May 2026; Cloudnet + AD-Campus for management; up to 49,275 kWh/year energy savings per site"
+  - name: "Vladislav Solotsky"
+    company: "Delta Electronics"
+    role: "Regional representative"
+    topic: "High-efficiency and sustainable Delta solutions for data centers and critical infrastructure"
+    details:
+      - "Delta Electronics: founded 1971, $13.1B revenue (2024), 8% in R&D, 16,700+ patents, 81K+ employees"
+      - "23.84M tons of CO₂ emissions cut between 2010 and 2023"
+      - "DPH Gen.3 UPS — 625 kW / 1250 kW models (and 2000 kW upcoming)"
+      - "1250 kW in 1 m² power density — +25% power, −47% space vs DPH Gen 2"
+      - "Up to 97.5% efficiency in double-conversion mode, up to 99% in Clean mode"
+      - "Lithium-ion / VRLA / Ni-Zinc batteries, hot-swap power modules, predictive failure detection"
 conclusions:
   - title: "Lenovo ISG"
     items:
@@ -64,16 +86,18 @@ conclusions:
       - "Mist AI + Marvis Assistant"
       - "QFX/PTX/ACX up to 800G"
       - "Wi-Fi 7: AP47, AP37, AP27"
-  - title: "H3C"
+  - title: "H3C «AI in All»"
     items:
-      - "DC switches and routers"
-      - "Campus networking solutions"
-      - "Alternative networking portfolio"
-  - title: "Delta"
+      - "AI-ECO: dynamic energy savings"
+      - "AI-ECN, AI-OC, AI-SOC for networking and security"
+      - "Cloudnet + AD-Campus, first WiFi-8 (May 2026)"
+      - "S12500 AI (1.6T), UniStor Polaris X20000"
+  - title: "Delta DPH Gen.3"
     items:
-      - "UPS and uninterruptible power systems"
-      - "Data center energy efficiency"
-      - "Engineering infrastructure"
+      - "UPS 625 / 1250 kW (2000 kW upcoming)"
+      - "1250 kW in 1 m² — record power density"
+      - "97.5% efficiency (double conversion), 99% Clean mode"
+      - "Lithium-ion / VRLA / Ni-Zinc, hot-swap modules"
 recommendations:
   immediate:
     - "Pilot order via Lenovo Top Choice Express for projects with tight deadlines"
@@ -90,7 +114,7 @@ techStack:
     description: "Server & Storage Quick Ship"
     color: "red"
   - name: "ThinkStation PGX"
-    description: "Personal AI Workstation"
+    description: "NVIDIA GB10, 1000 TOPS"
     color: "purple"
   - name: "HPE Apstra"
     description: "Intent-Based DC Networking"
@@ -98,12 +122,18 @@ techStack:
   - name: "Mist AI"
     description: "AIOps for Campus"
     color: "green"
+  - name: "H3C AI-ECO"
+    description: "AI Dynamic Energy Saving"
+    color: "green"
+  - name: "H3C LinSeer"
+    description: "AI Integration Platform"
+    color: "teal"
+  - name: "Delta DPH Gen.3"
+    description: "1250 kW UPS, 97.5% efficiency"
+    color: "red"
   - name: "Wi-Fi 7"
     description: "AP47 / AP37 / AP27"
-    color: "teal"
-  - name: "Delta UPS"
-    description: "Power & Energy Efficiency"
-    color: "red"
+    color: "purple"
 ctaQuestion: "Want to discuss a project?"
 photos:
   - "/images/events/2026-05-22/006.jpg"
@@ -156,7 +186,7 @@ Sustainability ran as a red thread through the entire event:
 
 ### Technology agenda
 
-Two keynote talks shaped the day — details and speakers are in the **Presentations** section below.
+Four keynote talks shaped the day — details and speakers are in the **Presentations** section below.
 
 ### Value for our partnership
 
@@ -166,8 +196,8 @@ For ACROPOLIS INTEGRO, the event was an opportunity to **deepen the relationship
 |---|---|
 | Lenovo ISG | Current roadmap, Top Choice Express, new ThinkStation PGX |
 | HPE Networking | Unified Juniper + Aruba portfolio after the M&A, Apstra, Mist AI |
-| H3C | Introduction to the alternative networking portfolio |
-| Delta | UPS updates and solutions for data center modernization |
+| H3C | «AI in All»: AI-ECO/AI-ECN/AI-SOC, LinSeer, S12500 AI |
+| Delta | DPH Gen.3 — 1250 kW in 1 m², 97.5% efficiency, lithium-ion |
 
 The eco format underlined an important point: **sustainable technology** is not only about architecture and performance — it is also about a responsible approach to resources, data center energy efficiency, and a long equipment lifecycle.
 

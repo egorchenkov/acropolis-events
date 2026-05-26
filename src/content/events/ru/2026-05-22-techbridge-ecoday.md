@@ -51,6 +51,28 @@ speakers:
       - "Mist AI и Marvis Assistant — AIOps для кампусных сетей, 20-кратный лидер Gartner Magic Quadrant"
       - "Wi-Fi 7 portfolio: AP47/AP37/AP27 (Mist) и Aruba 730/740/750 series"
       - "AP723H — первый dual-platform Access Point (Mist Cloud или Aruba Central, выбор на boot)"
+  - name: "H3C Technologies Tashkent"
+    company: "H3C"
+    role: "Команда H3C Tashkent LLC"
+    topic: "Boosting Green Practice with AI-enabled Computing × Connectivity"
+    details:
+      - "«All in Green» — глобальная стратегия H3C: 800+ зелёных ЦОД, ежегодный Sustainability Report"
+      - "Эволюция AI: Perception → Generative → Agentic → Physical AI"
+      - "«AI for ALL» + «AI in ALL»: AI/HPC Scheduling Platform, LinSeer AI Integration Platform"
+      - "AI-ready инфраструктура: S12500 AI (1.6T), CR19000, LinSeer Cube, UniStor Polaris X20000, SecPath M9000-X"
+      - "AI-Enabled Campus: Wi-Fi 4i+ (92% точность AI-модели), AI-ECN, AI-ECO, AI-OC (компрессия 2.5:1, экономия полосы 50%), AI-SOC"
+      - "Первый WiFi-8 девайс — май 2026; Cloudnet + AD-Campus для управления; экономия энергии до 49 275 кВт·ч/год на узле"
+  - name: "Владислав Солоцкий"
+    company: "Delta Electronics"
+    role: "Представитель Delta в регионе"
+    topic: "Высокоэффективные и экологичные решения Delta для ЦОД и объектов критической инфраструктуры"
+    details:
+      - "Delta Electronics: основана в 1971, выручка $13.1B (2024), 8% в НИОКР, 16 700+ патентов, 81K+ сотрудников"
+      - "Сокращение выбросов углерода на 23.84 млн тонн с 2010 по 2023 год"
+      - "ИБП DPH Gen.3 — модельный ряд 625 кВт / 1250 кВт (и 2000 кВт upcoming)"
+      - "Плотность мощности 1250 кВт в 1 м² — на 25% больше при −47% площади vs DPH Gen 2"
+      - "КПД до 97.5% в режиме двойного преобразования, до 99% в режиме Clean"
+      - "Lithium-ion / VRLA / Ni-Zinc батареи, горячая замена силовых модулей, прогнозирование неисправностей"
 conclusions:
   - title: "Lenovo ISG"
     items:
@@ -64,16 +86,18 @@ conclusions:
       - "Mist AI + Marvis Assistant"
       - "QFX/PTX/ACX до 800G"
       - "Wi-Fi 7: AP47, AP37, AP27"
-  - title: "H3C"
+  - title: "H3C «AI in All»"
     items:
-      - "Коммутаторы и маршрутизаторы ЦОД"
-      - "Решения для кампусных сетей"
-      - "Альтернативный сетевой портфель"
-  - title: "Delta"
+      - "AI-ECO: динамическая экономия энергии"
+      - "AI-ECN, AI-OC, AI-SOC для сетей и безопасности"
+      - "Cloudnet + AD-Campus, первый WiFi-8 (май 2026)"
+      - "S12500 AI (1.6T), UniStor Polaris X20000"
+  - title: "Delta DPH Gen.3"
     items:
-      - "ИБП и системы бесперебойного питания"
-      - "Энергоэффективность ЦОД"
-      - "Инженерная инфраструктура"
+      - "ИБП 625 / 1250 кВт (2000 кВт upcoming)"
+      - "1250 кВт в 1 м² — рекордная плотность мощности"
+      - "КПД 97.5% (двойное преобразование), 99% Clean mode"
+      - "Lithium-ion / VRLA / Ni-Zinc, горячая замена"
 recommendations:
   immediate:
     - "Пилотная поставка через Lenovo Top Choice Express для проектов с жёсткими сроками"
@@ -90,7 +114,7 @@ techStack:
     description: "Server & Storage Quick Ship"
     color: "red"
   - name: "ThinkStation PGX"
-    description: "Personal AI Workstation"
+    description: "NVIDIA GB10, 1000 TOPS"
     color: "purple"
   - name: "HPE Apstra"
     description: "Intent-Based DC Networking"
@@ -98,12 +122,18 @@ techStack:
   - name: "Mist AI"
     description: "AIOps for Campus"
     color: "green"
+  - name: "H3C AI-ECO"
+    description: "AI Dynamic Energy Saving"
+    color: "green"
+  - name: "H3C LinSeer"
+    description: "AI Integration Platform"
+    color: "teal"
+  - name: "Delta DPH Gen.3"
+    description: "1250 кВт UPS, 97.5% КПД"
+    color: "red"
   - name: "Wi-Fi 7"
     description: "AP47 / AP37 / AP27"
-    color: "teal"
-  - name: "Delta UPS"
-    description: "Power & Energy Efficiency"
-    color: "red"
+    color: "purple"
 ctaQuestion: "Обсудим проекты?"
 photos:
   - "/images/events/2026-05-22/006.jpg"
@@ -156,7 +186,7 @@ ACROPOLIS INTEGRO приняла участие в главном партнёр
 
 ### Технологическая повестка
 
-Два ключевых доклада задали тон дня — подробности и спикеры представлены ниже, в разделе **Доклады**.
+Четыре доклада задали тон дня — подробности и спикеры представлены ниже, в разделе **Доклады**.
 
 ### Партнёрская ценность для нас
 
@@ -166,8 +196,8 @@ ACROPOLIS INTEGRO приняла участие в главном партнёр
 |---|---|
 | Lenovo ISG | Актуальный roadmap, Top Choice Express, новинка ThinkStation PGX |
 | HPE Networking | Единый портфель Juniper + Aruba после M&A, Apstra, Mist AI |
-| H3C | Знакомство с альтернативным сетевым портфелем |
-| Delta | Обновление по ИБП и решениям для модернизации ЦОД |
+| H3C | «AI in All»: AI-ECO/AI-ECN/AI-SOC, LinSeer, S12500 AI |
+| Delta | DPH Gen.3 — 1250 кВт в 1 м², КПД 97.5%, литий-ион |
 
 Эко-формат подчеркнул важную мысль: **устойчивые технологии** — это не только архитектура и производительность, но и ответственный подход к ресурсам, энергоэффективность ЦОД и долгий жизненный цикл оборудования.
 

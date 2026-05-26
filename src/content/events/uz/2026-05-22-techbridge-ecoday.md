@@ -51,6 +51,28 @@ speakers:
       - "Mist AI va Marvis Assistant — kampus tarmoqlari uchun AIOps, Gartner Magic Quadrant'ning 20-marotaba yetakchisi"
       - "Wi-Fi 7 portfolio: AP47/AP37/AP27 (Mist) va Aruba 730/740/750 seriyalari"
       - "AP723H — birinchi dual-platform Access Point (Mist Cloud yoki Aruba Central, boot vaqtida tanlanadi)"
+  - name: "H3C Technologies Tashkent"
+    company: "H3C"
+    role: "H3C Tashkent LLC jamoasi"
+    topic: "Boosting Green Practice with AI-enabled Computing × Connectivity"
+    details:
+      - "«All in Green» — H3C global strategiyasi: 800+ yashil DPC, har yili Sustainability Report"
+      - "AI evolyutsiyasi: Perception → Generative → Agentic → Physical AI"
+      - "«AI for ALL» + «AI in ALL»: AI/HPC Scheduling Platform, LinSeer AI Integration Platform"
+      - "AI-ready infratuzilma: S12500 AI (1.6T), CR19000, LinSeer Cube, UniStor Polaris X20000, SecPath M9000-X"
+      - "AI-Enabled Campus: Wi-Fi 4i+ (92% AI-model aniqligi), AI-ECN, AI-ECO, AI-OC (2.5:1 siqish, 50% kanalni tejash), AI-SOC"
+      - "Birinchi WiFi-8 qurilma 2026-yil mayda; Cloudnet + AD-Campus boshqaruvi; har bir uzelda yilda 49 275 kVt·s gacha tejash"
+  - name: "Vladislav Solotskiy"
+    company: "Delta Electronics"
+    role: "Mintaqa vakili"
+    topic: "DPC va kritik infratuzilma uchun Delta'ning yuqori samarali va ekologik yechimlari"
+    details:
+      - "Delta Electronics: 1971-yilda tashkil etilgan, $13.1B daromad (2024), 8% NIOKR, 16 700+ patent, 81K+ xodim"
+      - "2010-2023 yillarda 23.84 mln tonna CO₂ chiqindilarini qisqartirish"
+      - "DPH Gen.3 UPS — 625 kVt / 1250 kVt modellari (2000 kVt upcoming)"
+      - "1250 kVt 1 m² da — DPH Gen 2 ga nisbatan +25% quvvat, −47% maydon"
+      - "Ikki tomonlama konvertatsiya rejimida 97.5% gacha, Clean rejimida 99% gacha samaradorlik"
+      - "Lithium-ion / VRLA / Ni-Zinc batareyalar, issiq almashinish modullari, nosozliklarni oldindan aniqlash"
 conclusions:
   - title: "Lenovo ISG"
     items:
@@ -64,16 +86,18 @@ conclusions:
       - "Mist AI + Marvis Assistant"
       - "800G gacha QFX/PTX/ACX"
       - "Wi-Fi 7: AP47, AP37, AP27"
-  - title: "H3C"
+  - title: "H3C «AI in All»"
     items:
-      - "DPC kommutatorlari va marshrutizatorlari"
-      - "Kampus tarmoqlari yechimlari"
-      - "Muqobil tarmoq portfeli"
-  - title: "Delta"
+      - "AI-ECO: dinamik energiya tejash"
+      - "AI-ECN, AI-OC, AI-SOC tarmoq va xavfsizlik uchun"
+      - "Cloudnet + AD-Campus, birinchi WiFi-8 (may 2026)"
+      - "S12500 AI (1.6T), UniStor Polaris X20000"
+  - title: "Delta DPH Gen.3"
     items:
-      - "UPS va uzluksiz quvvat tizimlari"
-      - "DPC energiya samaradorligi"
-      - "Muhandislik infratuzilmasi"
+      - "UPS 625 / 1250 kVt (2000 kVt upcoming)"
+      - "1250 kVt 1 m² da — rekord quvvat zichligi"
+      - "97.5% samaradorlik (ikki tomonlama), 99% Clean rejim"
+      - "Lithium-ion / VRLA / Ni-Zinc, issiq almashinish"
 recommendations:
   immediate:
     - "Qattiq muddatli loyihalar uchun Lenovo Top Choice Express orqali pilot buyurtma"
@@ -90,7 +114,7 @@ techStack:
     description: "Server & Storage Quick Ship"
     color: "red"
   - name: "ThinkStation PGX"
-    description: "Personal AI Workstation"
+    description: "NVIDIA GB10, 1000 TOPS"
     color: "purple"
   - name: "HPE Apstra"
     description: "Intent-Based DC Networking"
@@ -98,12 +122,18 @@ techStack:
   - name: "Mist AI"
     description: "AIOps for Campus"
     color: "green"
+  - name: "H3C AI-ECO"
+    description: "AI Dynamic Energy Saving"
+    color: "green"
+  - name: "H3C LinSeer"
+    description: "AI Integration Platform"
+    color: "teal"
+  - name: "Delta DPH Gen.3"
+    description: "1250 kVt UPS, 97.5% samaradorlik"
+    color: "red"
   - name: "Wi-Fi 7"
     description: "AP47 / AP37 / AP27"
-    color: "teal"
-  - name: "Delta UPS"
-    description: "Power & Energy Efficiency"
-    color: "red"
+    color: "purple"
 ctaQuestion: "Loyihani muhokama qilamizmi?"
 photos:
   - "/images/events/2026-05-22/006.jpg"
@@ -156,7 +186,7 @@ Barqarorlik mavzusi butun tadbir bo'ylab qizil ip bo'lib o'tdi:
 
 ### Texnologiya kun tartibi
 
-Ikkita kalit ma'ruza kunning ohangini belgilab berdi — tafsilotlar va spikerlar quyidagi **Ma'ruzalar** bo'limida.
+To'rtta kalit ma'ruza kunning ohangini belgilab berdi — tafsilotlar va spikerlar quyidagi **Ma'ruzalar** bo'limida.
 
 ### Biz uchun hamkorlik qiymati
 
@@ -166,8 +196,8 @@ ACROPOLIS INTEGRO uchun tadbir TechBridge va vendorlar bilan bir nechta yo'nalis
 |---|---|
 | Lenovo ISG | Joriy roadmap, Top Choice Express, yangi ThinkStation PGX |
 | HPE Networking | M&A'dan keyingi birlashtirilgan Juniper + Aruba portfeli, Apstra, Mist AI |
-| H3C | Muqobil tarmoq portfeli bilan tanishish |
-| Delta | UPS yangiliklari va DPC modernizatsiyasi yechimlari |
+| H3C | «AI in All»: AI-ECO/AI-ECN/AI-SOC, LinSeer, S12500 AI |
+| Delta | DPH Gen.3 — 1 m² da 1250 kVt, 97.5% samaradorlik, lithium-ion |
 
 Eko-format muhim fikrni ta'kidladi: **barqaror texnologiya** bu nafaqat arxitektura va unumdorlik, balki resurslarga mas'uliyatli yondashuv, DPC energiya samaradorligi va uskunalarning uzoq xizmat muddatidir.
 
