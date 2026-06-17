@@ -632,6 +632,107 @@ h3 {
   color: var(--gray-300);
 }
 
+/* ===== Event body (markdown prose) ===== */
+.event-body {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.12rem;
+  line-height: 1.75;
+  color: var(--gray-700);
+}
+
+.event-body > *:first-child {
+  margin-top: 0;
+}
+
+.event-body h2,
+.event-body h3,
+.event-body h4 {
+  color: var(--gray-900);
+  letter-spacing: -0.02em;
+}
+
+.event-body h3 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(49, 41, 177, 0.1);
+}
+
+.event-body h4 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+  color: var(--primary);
+}
+
+.event-body p {
+  margin-bottom: 1.4rem;
+}
+
+.event-body ul,
+.event-body ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 1.6rem;
+}
+
+.event-body ul li,
+.event-body ol li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.7rem;
+}
+
+.event-body ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.66em;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--primary);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.event-body ol {
+  counter-reset: ev-item;
+}
+
+.event-body ol li {
+  counter-increment: ev-item;
+}
+
+.event-body ol li::before {
+  content: counter(ev-item);
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.event-body strong {
+  color: var(--gray-900);
+  font-weight: 600;
+}
+
+.event-body a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.event-body blockquote {
+  margin: 0 0 1.6rem;
+  padding: 0.6rem 0 0.6rem 1.4rem;
+  border-left: 3px solid var(--primary-light);
+  color: var(--gray-900);
+  font-style: italic;
+}
+
 /* ===== Photo Gallery ===== */
 .gallery-grid {
   display: grid;
