@@ -68,7 +68,10 @@ program:
   - time: "19:00–22:00"
     title: "Gala Dinner"
 ctaQuestion: "Would you like to discuss Lenovo solutions for your IT infrastructure?"
-photos: []
+photos:
+  - "/images/events/2026-11-05/01.jpg"
+  - "/images/events/2026-11-05/02.jpg"
+  - "/images/events/2026-11-05/03.jpg"
 contact:
   email: "info@acropolis.uz"
   telegram: "https://t.me/acropolis_integro"
